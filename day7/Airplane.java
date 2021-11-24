@@ -1,4 +1,4 @@
-package day6;
+package day7;
 
 public class Airplane {
     private String producer; // (изготовитель)
@@ -6,6 +6,13 @@ public class Airplane {
     private int length; // (длина)
     private int weight; // (вес)
     private int fuel; // (количество топлива в баке)
+
+    public static void compareAirplanes(Airplane oneAir, Airplane anotherAir) {
+        if(oneAir.length>anotherAir.length) System.out.println("Первый самолет длиннее");
+        else if (oneAir.length==anotherAir.length)System.out.println("Длины самолетов равны");
+        else System.out.println("Второй самолет длиннее");
+
+    }
 
     public Airplane(String producer, int year, int length, int weight) {
         this.producer = producer;
