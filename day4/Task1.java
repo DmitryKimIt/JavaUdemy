@@ -15,9 +15,9 @@ public class Task1 {
             System.out.print(arrays[j] + ", ");
             sumNum += arrays[j];
             if (arrays[j] > 8) up8++;
-            else if (arrays[j] == 1) equals1++;
-            else if (arrays[j] % 2 == 0) evenNumber++;
-            else if (arrays[j] % 2 != 0) oddNumber++;
+            if (arrays[j] == 1) equals1++;
+            if (arrays[j] % 2 == 0) evenNumber++;
+            if (arrays[j] % 2 != 0) oddNumber++;
         }
         System.out.println("Длина массива: " + n);
         System.out.println("Количество чисел больше 8: " + up8);

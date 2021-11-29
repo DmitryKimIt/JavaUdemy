@@ -31,10 +31,6 @@ public class Car {
         return modelCar;
     }
     public int yearDifference(int year) {
-        int dif=0;
-        if (year>this.yearOfCar){
-            dif = year-this.yearOfCar;
-        }
-        return dif;
+        return Math.abs(year-this.yearOfCar); // в одну строчку, с помощью Math.abs
     }
 }

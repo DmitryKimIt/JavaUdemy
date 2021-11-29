@@ -15,10 +15,10 @@ public class Task2 {
         Player player8 = new Player(stamina.nextInt((Player.MAX_STAMINA-Player.MIN_STAMINA) + 1) + 90);
         Player.info();
 
-        for (int i = player1.getStamina(); i >= Player.MIN_STAMINA; i--) {
+        while (player1.getStamina()!=Player.MIN_STAMINA){
             player1.run();
         }
-        System.out.println(Player.countPlayers);
+        System.out.println(Player.getCountPlayers()); // исправлено на метод get
     }
 
 

@@ -9,41 +9,18 @@ public class Task1 {
         boolean loop= true;
         while (loop) {
             nameCity = scanner.nextLine();
-            switch (nameCity) {
-                case "Москва":
+            switch (nameCity)
+            {
+                case "Москва","Владивосток","Ростов":
                     System.out.println("Россия");
                     break;
-                case "Владивосток":
-                    System.out.println("Россия");
-                    break;
-                case "Ростов":
-                    System.out.println("Россия");
-                    break;
-                case "Рим":
+                case "Рим","Милан","Турин":
                     System.out.println("Италия");
                     break;
-                case "Милан":
-                    System.out.println("Италия");
-                    break;
-                case "Турин":
-                    System.out.println("Италия");
-                    break;
-                case "Ливерпуль":
+                case "Ливерпуль", "Манчестер", "Лондон":
                     System.out.println("Англия");
                     break;
-                case "Манчестер":
-                    System.out.println("Англия");
-                    break;
-                case "Лондон":
-                    System.out.println("Англия");
-                    break;
-                case "Берлин":
-                    System.out.println("Германия");
-                    break;
-                case "Мюнхен":
-                    System.out.println("Германия");
-                    break;
-                case "Кёльн":
+                case "Берлин","Мюнхен","Кёльн":
                     System.out.println("Германия");
                     break;
                 case "Stop":

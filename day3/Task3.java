@@ -11,15 +11,8 @@ public class Task3 {
         for (int i = 0; i < 5; i++) {
             a = scanner.nextDouble();
             b = scanner.nextDouble();
-            x = (int) Math.round(b);
-            switch (x) {
-                case 0:
-                    System.out.println("Деление на 0");
-                    continue;
-                default:
-                    System.out.println(a / b);
-            }
-
+            if (b == 0) System.out.println("Деление на 0");
+            else System.out.println(a / b);
         }
 
     }
