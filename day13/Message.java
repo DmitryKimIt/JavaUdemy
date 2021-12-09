@@ -3,10 +3,10 @@ package day13;
 import java.util.Date;
 
 public class Message {
-    User sender; // - отправитель сообщения
-    User receiver; // - получатель сообщения
-    String text; //- текст сообщения
-    Date date; // - дата отправки сообщения
+    private User sender; // - отправитель сообщения
+    private User receiver; // - получатель сообщения
+    private String text; //- текст сообщения
+    private Date date; // - дата отправки сообщения
 
     public Message(User sender, User receiver, String text) {
         this.sender = sender;

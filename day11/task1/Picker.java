@@ -15,7 +15,7 @@ public class Picker implements Worker {
     @Override
     public void doWork() {
         salary += TASK;
-        warehouse.CountPickedPlus();
+        warehouse.countPickedPlus();
     }
 
     @Override

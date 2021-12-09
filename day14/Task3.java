@@ -18,24 +18,21 @@ public class Task3 {
         Scanner scanner = new Scanner("");
         try {
             scanner = new Scanner(file);
-        }
-        catch(FileNotFoundException x){
-            System.out.println("Файл не найден");
-        }
-
         while (scanner.hasNextLine()){
             String line =scanner.nextLine();
             ageStr=line.split(" ");
             if(Integer.parseInt(ageStr[1])<0){
-                try {
-                    throw new IOException();
-                } catch (IOException e) {
-                    System.out.println("Некорректный входной файл");
-                    return null;
-                }
+                throw new IOException();
             }
             Person person = new Person(ageStr[0],Integer.parseInt(ageStr[1]));
             array.add(person);
+        }
+        }
+        catch(FileNotFoundException x){
+            System.out.println("Файл не найден");
+        }
+        catch(IOException e){
+            System.out.println("Некорректный входной файл");
         }
         return array;
     }

@@ -23,8 +23,7 @@ public class MusicBand {
         twoMembers.addAll(oneGroupMusic.getMembers());
         twoGroupMusic.members =twoMembers;
         oneGroupMusic.members =new ArrayList<>();
-        oneGroupMusic.printMembers();
-        twoGroupMusic.printMembers();
+        // создается новый список так как я использовал asList а в подаче задания написано что он immutable и это исправляется созданием прокладки :)
     }
 
 

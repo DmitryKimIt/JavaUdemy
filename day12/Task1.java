@@ -1,10 +1,11 @@
 package day12;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Task1 {
     public static void main(String[] args) {
-        ArrayList<String> auto = new ArrayList<>();
+        List<String> auto = new ArrayList<>(); // исправлено на List<String>
         auto.add("Audi");
         auto.add("Mazda");
         auto.add("Mersedes");

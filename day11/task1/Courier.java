@@ -15,7 +15,7 @@ public class Courier implements Worker {
     @Override
     public void doWork() {
         salary += TASK;
-        warehouse.CountDeliveredPlus();
+        warehouse.countDeliveredPlus();
     }
 
     @Override

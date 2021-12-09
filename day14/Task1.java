@@ -19,26 +19,24 @@ public class Task1 {
         Scanner scanner=new Scanner("");
         try {
             scanner = new Scanner(file);
+            String line = scanner.nextLine();
+            //System.out.println(line);
+            String[] numbersStr = line.split(" ");
+            if (numbersStr.length != 10) {
+                    throw new IOException();
+            }
+            for (int i = 0; i < numbersStr.length; i++) {
+                sumNumbersInt += Integer.parseInt(numbersStr[i]);
+            }
+            System.out.println(sumNumbersInt);
+            scanner.close();
         }
-        catch(FileNotFoundException d){
+        catch(FileNotFoundException d){   // перенес в конец класса
             System.out.println("файл не найден");
         }
-        String line =  scanner.nextLine();
-        //System.out.println(line);
-        String [] numbersStr = line.split(" ");
-        if (numbersStr.length!=10){
-            try {
-                throw new IOException();
-            }
-            catch (IOException e){
-                System.out.println("Некорректный входной файл");
-            }
+        catch (IOException e) {  // перенес и убрал избыточный try
+            System.out.println("Некорректный входной файл");
         }
-        for (int i = 0; i < numbersStr.length ; i++) {
-            sumNumbersInt+=Integer.parseInt(numbersStr[i]);
-        }
-        System.out.println(sumNumbersInt);
-        scanner.close();
     }
 
 }

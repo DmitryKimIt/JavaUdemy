@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Task1 {
     public static void main(String[] args) {
-        ArrayList<Worker> employees = new ArrayList<>();
+        List<Worker> employees = new ArrayList<>();
         Warehouse warehouse = new Warehouse();
         Warehouse warehouse2 = new Warehouse();
         employees.add(new Picker(warehouse));

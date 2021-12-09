@@ -5,7 +5,7 @@ import java.util.List;
 
 public class User {
     private String username;
-    List<User> subscriptions;
+    private List<User> subscriptions; // исправлено
 
     public User(String username) {
         this.username = username;
@@ -20,8 +20,12 @@ public class User {
     /*  метод isSubscribed - возвращает True,
      * если пользователь подписан на пользователя user и False, если не подписан. */
     public boolean isSubscribed(User user) {
-        for (User x: subscriptions) {
-            if (x.username.equals(user.getUsername())) return true;
+//        for (User x: subscriptions) {
+//            if (x.username.equals(user.getUsername())) return true;
+//        }
+        // исправлено на contains
+        if(subscriptions.contains(user)){
+            return true;
         }
         return false;
     }

@@ -1,8 +1,8 @@
 package day11.task1;
 
 public class Warehouse {
-    int countPickedOrders; //количество собранных заказов
-    int countDeliveredOrders; // количество доставленных заказов
+    private int countPickedOrders; //количество собранных заказов
+    private int countDeliveredOrders; // количество доставленных заказов
 
     @Override
     public String toString() {
@@ -19,11 +19,11 @@ public class Warehouse {
         return countDeliveredOrders;
     }
 
-    public void CountDeliveredPlus() {
+    public void countDeliveredPlus() {
         countDeliveredOrders ++;
     }
 
-    public void CountPickedPlus() {
+    public void countPickedPlus() {
         countPickedOrders++;
     }
 }

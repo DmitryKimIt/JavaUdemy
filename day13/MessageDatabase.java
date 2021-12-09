@@ -11,8 +11,9 @@ public class MessageDatabase {
      * Отправка в нашем контексте означает добавление сообщения в нашу “базу данных”.
      */
     public static void addNewMessage(User u1, User u2, String text) {
-        Message message = new Message(u1, u2, text);
-        messages.add(message);
+//        Message message = new Message(u1, u2, text);
+//        messages.add(message);
+        messages.add(new Message(u1, u2, text)); // сократил
     }
 
     /* getMessages - возвращает список всех сообщений в “базе данных”. */
@@ -31,8 +32,8 @@ public class MessageDatabase {
 //            if (x.sender.getUsername().equals(u2.getUsername()) && x.receiver.getUsername().equals(u1.getUsername())) {
 //                System.out.println(x.sender.getUsername()+": " + x.text);
 //            }
-            if (x.sender.equals(u1) && x.receiver.equals(u2) || (x.sender.equals(u2) && x.receiver.equals(u1))) {
-                System.out.println(x.sender.getUsername() + ": " + x.text);
+            if (x.getSender().equals(u1) && x.getReceiver().equals(u2) || (x.getSender().equals(u2) && x.getReceiver().equals(u1))) {
+                System.out.println(x.getSender().getUsername() + ": " + x.getText());
             }
         }
     }
